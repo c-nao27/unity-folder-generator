@@ -28,7 +28,7 @@ public class FolderGenerator : EditorWindow
         // "Gizmos",
     };
 
-    private string path = "未選択";
+    private string path = "Assets";
     private Vector2 scrollBar = Vector2.zero;
 
     private void OnGUI()
@@ -41,6 +41,8 @@ public class FolderGenerator : EditorWindow
         {
             path = EditorUtility.OpenFolderPanel("フォルダを選択する", Application.dataPath, string.Empty);
             EditorGUILayout.LabelField(path);
+            // エディターの更新
+            AssetDatabase.Refresh();
         }
         EditorGUILayout.Space();
 
@@ -51,7 +53,7 @@ public class FolderGenerator : EditorWindow
             {
                 if (GUILayout.Button(folder))
                 {
-                    string folderPath = path + "/" + folder;
+                    string folderPath = Path.Combine(path, folder);
 
                     if (!Directory.Exists(folderPath))
                     {
