@@ -41,14 +41,13 @@ public class FolderGenerator : EditorWindow
         {
             path = EditorUtility.OpenFolderPanel("フォルダを選択する", Application.dataPath, string.Empty);
             EditorGUILayout.LabelField(path);
-            // エディターの更新
-            AssetDatabase.Refresh();
         }
         EditorGUILayout.Space();
 
         EditorGUILayout.LabelField("作成するフォルダ", EditorStyles.boldLabel);
         EditorGUILayout.BeginScrollView(scrollBar);
         {
+            // フォルダリストのボタンを生成する
             foreach (string folder in folderList)
             {
                 if (GUILayout.Button(folder))
