@@ -7,4 +7,4 @@ Unityでよく使うフォルダを任意の場所に簡単に作成するエデ
 
 フォルダを追加したい場合は、
 [Assets/Editor/FolderGenerator.cs](https://github.com/c-nao27/Unity-FolderGenerator/blob/master/Assets/Editor/FolderGenerator.cs)
-のフォルダリストを編集してください
+を編集してください
