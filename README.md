@@ -1,4 +1,4 @@
-# Unity-FolderGenerator
+# Unity Folder Generator
 Unityでよく使うフォルダを任意の場所に簡単に作成するエディタ拡張です。  
 ![FolderGenerator-Window](https://user-images.githubusercontent.com/78206853/118533511-1ff9de80-b783-11eb-8df4-35c34d541d4c.png)
 
