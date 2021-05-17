@@ -4,8 +4,8 @@ using System.IO;
 
 public class FolderGenerator : EditorWindow
 {
-    [MenuItem("Editor/FolderGenerator")]
-    static void ShowWindow() => GetWindow<FolderGenerator>();
+    [MenuItem("Assets/Create/Folder Generator", false, 18)]
+    static void ShowWindow() => GetWindow<FolderGenerator>("Folder Generator");
 
     // 作成するフォルダのリスト
     private static readonly string[] folderList = new string[]
