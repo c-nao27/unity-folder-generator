@@ -45,7 +45,7 @@ public class FolderGenerator : EditorWindow
         EditorGUILayout.Space();
 
         EditorGUILayout.LabelField("フォルダを作成", EditorStyles.boldLabel);
-        EditorGUILayout.BeginScrollView(scrollBar);
+        scrollBar = EditorGUILayout.BeginScrollView(scrollBar);
         {
             // フォルダの数だけボタンを作成
             foreach (string folder in folderList)
@@ -67,7 +67,6 @@ public class FolderGenerator : EditorWindow
                         Debug.Log(folderPath + "は既に存在します");
                     }
                 }
-
             }
 
             EditorGUILayout.HelpBox("Assets/Editor/FolderGeneretor.cs"
