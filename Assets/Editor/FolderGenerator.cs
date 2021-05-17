@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEditor;
 using System.IO;
 
@@ -7,7 +7,7 @@ public class FolderGenerator : EditorWindow
     [MenuItem("Editor/FolderGenerator")]
     static void ShowWindow() => GetWindow<FolderGenerator>();
 
-    // "ƒtƒHƒ‹ƒ_–¼", ‚Åì¬‚·‚éƒtƒHƒ‹ƒ_‚ğ’Ç‰Á
+    // ä½œæˆã™ã‚‹ãƒ•ã‚©ãƒ«ãƒ€ã®ãƒªã‚¹ãƒˆ
     private static readonly string[] folderList = new string[]
     {
         "Scenes",
@@ -33,21 +33,21 @@ public class FolderGenerator : EditorWindow
 
     private void OnGUI()
     {
-        EditorGUILayout.LabelField("‘I‘ğ‚µ‚½êŠ‚ÉƒtƒHƒ‹ƒ_‚ğì¬‚µ‚Ü‚·", EditorStyles.boldLabel);
+        EditorGUILayout.LabelField("é¸æŠã—ãŸãƒ•ã‚©ãƒ«ãƒ€ã®ä¸‹ã«ãƒ•ã‚©ãƒ«ãƒ€ã‚’ä½œæˆã—ã¾ã™", EditorStyles.boldLabel);
 
         GUILayout.Box(path);
 
-        if (GUILayout.Button("ƒtƒHƒ‹ƒ_‚ğ‘I‘ğ‚·‚é"))
+        if (GUILayout.Button("ãƒ•ã‚©ãƒ«ãƒ€ã‚’é¸æŠ"))
         {
-            path = EditorUtility.OpenFolderPanel("ƒtƒHƒ‹ƒ_‚ğ‘I‘ğ‚·‚é", Application.dataPath, string.Empty);
+            path = EditorUtility.OpenFolderPanel("ä½œæˆã™ã‚‹ãƒ•ã‚©ãƒ«ãƒ€", Application.dataPath, string.Empty);
             EditorGUILayout.LabelField(path);
         }
         EditorGUILayout.Space();
 
-        EditorGUILayout.LabelField("ì¬‚·‚éƒtƒHƒ‹ƒ_", EditorStyles.boldLabel);
+        EditorGUILayout.LabelField("ãƒ•ã‚©ãƒ«ãƒ€ã‚’ä½œæˆ", EditorStyles.boldLabel);
         EditorGUILayout.BeginScrollView(scrollBar);
         {
-            // ƒtƒHƒ‹ƒ_ƒŠƒXƒg‚Ìƒ{ƒ^ƒ“‚ğ¶¬‚·‚é
+            // ãƒ•ã‚©ãƒ«ãƒ€ã®æ•°ã ã‘ãƒœã‚¿ãƒ³ã‚’ä½œæˆ
             foreach (string folder in folderList)
             {
                 if (GUILayout.Button(folder))
@@ -57,21 +57,21 @@ public class FolderGenerator : EditorWindow
                     if (!Directory.Exists(folderPath))
                     {
                         Directory.CreateDirectory(folderPath);
-                        Debug.Log(folderPath + "‚ğì¬‚µ‚Ü‚µ‚½");
+                        Debug.Log(folderPath + "ã‚’ä½œæˆã—ã¾ã—ãŸ");
 
-                        // ƒGƒfƒBƒ^[‚ÌXV
+                        // æ›´æ–°
                         AssetDatabase.Refresh();
                     }
                     else
                     {
-                        Debug.Log("Šù‚ÉƒtƒHƒ‹ƒ_‚ª‘¶İ‚µ‚Ü‚·");
+                        Debug.Log(folderPath + "ã¯æ—¢ã«å­˜åœ¨ã—ã¾ã™");
                     }
                 }
 
             }
 
-            EditorGUILayout.HelpBox("Assets/Editor/FolderGeneretor " +
-                "‚ğ•ÒW‚·‚é‚±‚Æ‚Åì¬‚·‚éƒtƒHƒ‹ƒ_‚Ìí—Ş‚ğ‘‚â‚¹‚Ü‚·B", MessageType.Info);
+            EditorGUILayout.HelpBox("Assets/Editor/FolderGeneretor.cs"
+                + "\nã‚’ç·¨é›†ã—ã¦ä½œæˆã™ã‚‹ãƒ•ã‚©ãƒ«ãƒ€ã‚’è¿½åŠ ã§ãã¾ã™", MessageType.Info);
         }
         EditorGUILayout.EndScrollView();
     }
