@@ -13,6 +13,8 @@ public class FolderGenerator : EditorWindow
         "Scenes",
         "Scripts",
         "Prefabs",
+        "Sprites",
+        "Models",
         "Textures",
         "Shaders",
         "Materials",
@@ -24,7 +26,7 @@ public class FolderGenerator : EditorWindow
         "Fonts",
         "Plugins",
         "Editor",
-        // "Editor DefaultResources",
+        // "Editor Default Resources",
         // "Gizmos",
     };
 
