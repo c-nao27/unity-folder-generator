@@ -3,7 +3,8 @@ Unityでよく使うフォルダを任意の場所に簡単に作成するエデ
 ![FolderGenerator-Window](https://user-images.githubusercontent.com/78206853/118533511-1ff9de80-b783-11eb-8df4-35c34d541d4c.png)
 
 # Download
-FolderGenerator.unitypackage [DL Here](https://github.com/c-nao27/Unity-FolderGenerator/raw/master/ExportPackages/FolderGenerator.unitypackage) | [Source Code](https://github.com/c-nao27/Unity-FolderGenerator/blob/master/Assets/Editor/FolderGenerator.cs)\n
+FolderGenerator.unitypackage [DL Here](https://github.com/c-nao27/Unity-FolderGenerator/raw/master/ExportPackages/FolderGenerator.unitypackage) | [Source Code](https://github.com/c-nao27/Unity-FolderGenerator/blob/master/Assets/Editor/FolderGenerator.cs) 
+
 ダウンロード後、適用したいUnityプロジェクトにインポートしてください。
 
 
